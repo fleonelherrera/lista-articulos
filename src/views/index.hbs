@@ -1,0 +1,29 @@
+<div class="container mt-3">
+    <div class="bg-opacity-25 bg-primary rounded-3 mt-5 p-5">
+        <h1>Ingreso de datos del artículo</h1>
+        <hr>
+
+        <form action="/guardar" method="post" autocomplete="off">
+            <!-- campo nombre -->
+            <div class="form-group">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre">
+            </div>
+                
+            <!-- campo descripción -->
+            <div class="form-group">
+                <label for="descripcion" class="form-label">Descripción</label>
+                <input type="text" class="form-control" id="descripcion" name="descripcion">
+            </div>
+
+            <!-- campo precio -->
+            <div class="form-group">
+                <label for="precio" class="form-label">Precio</label>
+                <input type="text" class="form-control" id="precio" name="precio">
+            </div>
+
+            <button class="btn btn-primary my-3">Enviar</button>
+
+        </form>
+    </div>
+</div>
