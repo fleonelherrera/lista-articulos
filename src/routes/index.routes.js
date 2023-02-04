@@ -3,9 +3,13 @@ import { Router } from 'express'
 const router  = Router()
 
 
-router.get('/', (req, res) => {
-    res.render('index')
+router.get('/', async (req, res) => {
+
+    let articulos = await Articulo.find().lean() // con lean() indicamos que debe devolver objetos de JS
+
+    res.render('index', { articulos: articulos })
 })
+
 
 router.post('/guardar', async (req, res) => {
 
@@ -18,6 +22,11 @@ router.post('/guardar', async (req, res) => {
         }
 
     res.redirect('/')
+})
+
+
+router.get('/about', (req, res) => {
+    res.render('about')
 })
 
 export default router

@@ -25,5 +25,18 @@
             <button class="btn btn-primary my-3">Enviar</button>
 
         </form>
+
+        <ul>
+            {{#each articulos}}
+            <li>
+                {{nombre}}
+                <p>{{descripcion}}</p>
+                <p>{{precio}}</p>
+                <button>Borrar</button>
+            </li>
+            {{/each}}
+        </ul>
+
+
     </div>
 </div>
