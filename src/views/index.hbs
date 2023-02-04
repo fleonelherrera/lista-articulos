@@ -26,17 +26,22 @@
 
         </form>
 
-        <ul>
-            {{#each articulos}}
-            <li>
-                {{nombre}}
-                <p>{{descripcion}}</p>
-                <p>{{precio}}</p>
-                <button>Borrar</button>
-            </li>
-            {{/each}}
-        </ul>
+        <hr>
+        <h2>Artículos Guardados:</h2>
+        
+        <br>
 
+        {{#each articulos}}
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{nombre}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Precio: ${{precio}}</h6>
+                <p class="card-text">{{descripcion}}</p>
+                <button type="button" class="btn btn-primary">Editar</button>
+                <button type="button" class="btn btn-primary">Borrar</button>
+            </div>
+        </div>
+        {{/each}}
 
     </div>
 </div>
