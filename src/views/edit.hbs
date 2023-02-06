@@ -1,15 +1,12 @@
 <div class="container mt-3">
     <div class="bg-opacity-25 bg-primary rounded-3 mt-5 p-5">
-        <h1>Ingreso de datos del artículo</h1>
-        <hr>
-
-        <form action="/guardar" method="post" autocomplete="off">
+        <form action="/edit" method="post">
             <!-- campo nombre -->
             <div class="form-group">
                 <label for="nombre" class="form-label">Nombre</label>
                 <input type="text" class="form-control" id="nombre" name="nombre">
             </div>
-                
+                        
             <!-- campo descripción -->
             <div class="form-group">
                 <label for="descripcion" class="form-label">Descripción</label>
@@ -25,23 +22,5 @@
             <button class="btn btn-primary my-3">Enviar</button>
 
         </form>
-
-        <hr>
-        <h2>Artículos Guardados:</h2>
-        
-        <br>
-
-        {{#each articulos}}
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">{{nombre}}</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Precio: ${{precio}}</h6>
-                <p class="card-text">{{descripcion}}</p>
-                <a href="/edit" class="btn btn-primary">Editar</a>
-                <a href="/delete" class="btn btn-primary">Eliminar</a>
-            </div>
-        </div>
-        {{/each}}
-
     </div>
 </div>

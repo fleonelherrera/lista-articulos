@@ -10,6 +10,10 @@ router.get('/', async (req, res) => {
     res.render('index', { articulos: articulos })
 })
 
+router.get('/about', (req, res) => {
+    res.render('about')
+})
+
 
 router.post('/guardar', async (req, res) => {
 
@@ -25,8 +29,8 @@ router.post('/guardar', async (req, res) => {
 })
 
 
-router.get('/about', (req, res) => {
-    res.render('about')
+router.get('/edit', (req, res) => {
+    res.render('edit')
 })
 
 export default router
