@@ -1,25 +1,25 @@
 <div class="container mt-3">
     <div class="bg-opacity-25 bg-primary rounded-3 mt-5 p-5">
-        <form action="/edit" method="post">
+        <form action="/edit/{{articulo._id}}" method="post">
             <!-- campo nombre -->
             <div class="form-group">
                 <label for="nombre" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="nombre" name="nombre">
+                <input type="text" class="form-control" id="nombre" name="nombre" value="{{articulo.nombre}}">
             </div>
                         
             <!-- campo descripción -->
             <div class="form-group">
                 <label for="descripcion" class="form-label">Descripción</label>
-                <input type="text" class="form-control" id="descripcion" name="descripcion">
+                <input type="text" class="form-control" id="descripcion" name="descripcion" value="{{articulo.descripcion}}">
             </div>
 
             <!-- campo precio -->
             <div class="form-group">
                 <label for="precio" class="form-label">Precio</label>
-                <input type="text" class="form-control" id="precio" name="precio">
+                <input type="text" class="form-control" id="precio" name="precio" value="{{articulo.precio}}">
             </div>
 
-            <button class="btn btn-primary my-3">Enviar</button>
+            <button class="btn btn-primary my-3">Guardar</button>
 
         </form>
     </div>
