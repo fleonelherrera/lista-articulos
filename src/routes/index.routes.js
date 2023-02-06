@@ -25,6 +25,14 @@ router.get('/edit/:id', async (req, res) => {
     }
 })
 
+router.get('/delete/:id', async (req, res) => {
+    const {id} = req.params
+
+    await Articulo.findByIdAndDelete(id)
+
+    res.redirect('/')
+})
+
 
 
 // RUTAS POST
